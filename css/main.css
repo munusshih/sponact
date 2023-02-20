@@ -1,0 +1,68 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: #ddd;
+  font-family: '微軟正黑體', 'Arial', 'Roboto', sans-serif;
+}
+
+a {
+  color: blueviolet;
+  text-decoration: none;
+  border-bottom: 2px dotted blueviolet;
+  margin-right: 5px;
+  margin-left: 5px;
+  -webkit-transition: color 0.5s 0s, border 0.5s 0.1s;
+  transition: color 0.5s 0s, border 0.5s 0.1s;
+}
+
+a:hover {
+  color: whitesmoke;
+  border-bottom: 2px dotted whitesmoke;
+}
+
+main {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px 50px;
+  line-height: 1.5;
+}
+
+main h2 {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 100;
+}
+
+main span {
+  color: #555;
+  -webkit-transition: color 2s 1s;
+  transition: color 2s 1s;
+}
+
+main span:hover {
+  color: white;
+  -webkit-transition: none;
+  transition: none;
+}
+
+footer {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    position: relative;
+    width: 100%;
+    padding: 20px 50px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
