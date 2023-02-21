@@ -20,24 +20,33 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <script type="text/javascript" src="js/magicmouse.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script  src="js/ripple-effects.js"></script>
 
     <title>SpOnAcT</title>
 </head>
 
 <body>
+    <header></header>
+
     <main>
         <h2><a href="index.html" class="magic-hover magic-hover__square">SpOnAcT
                 偶發集合</a>是一個台灣的設計工作室、合作社、空間和社群花園，致力於探索藝術、設計、創意技術、文化和社會議題之間的複雜關係，並通過各種形式促進知識分享。
         </h2>
 
         <h2>我們的團體名稱來自大法官的<a
-                href="https://law.moj.gov.tw/LawClass/ExContent.aspx?ty=C&CC=D&CNO=718&kw=%E5%88%91%E6%B3%95" class="magic-hover magic-hover__square">《釋字第718號》</a>中提到人民有集會結社之自由，並偶發「因為特殊原因而為未經召集便自發聚集」的集會、遊行。我們的目標是便是為台灣的設計師、技術專家和對這些領域感興趣的人提供一個聚集的偶發集合，以進行批判性對話、學習和交流活動，並通過關懷和實踐來培養我們的創意社群。
+                href="https://law.moj.gov.tw/LawClass/ExContent.aspx?ty=C&CC=D&CNO=718&kw=%E5%88%91%E6%B3%95"
+                class="magic-hover magic-hover__square">《釋字第718號》</a>中提到人民有集會結社之自由，並偶發「因為特殊原因而為未經召集便自發聚集」的集會、遊行。我們的目標是便是為台灣的設計師、技術專家和對這些領域感興趣的人提供一個聚集的偶發集合，以進行批判性對話、學習和交流活動，並通過關懷和實踐來培養我們的創意社群。
         </h2>
 
         <h2>我們的核心成員由來自紐約和台灣兩地的朋友們 mor、munus、lexie、bushwa 構成，歡迎任何對這些主題感興趣的人透過<a
-                href="mailto:hi@sponact.xyz" class="magic-hover magic-hover__square">hi@sponact.xyz</a>聯絡我們！</h2>
+                href="mailto:hi@sponact.xyz"
+                class="magic-hover magic-hover__square">hi@sponact.xyz</a>聯絡我們！
+        </h2>
 
-        <h2>目前我們正在籌劃台灣第二屆的 <a class="magic-hover magic-hover__square" href="https://day.processing.org/">Processing 國際交流日</a>。</h2>
+        <h2>目前我們正在籌劃台灣第二屆的 <a class="magic-hover magic-hover__square"
+                href="https://day.processing.org/">Processing 國際交流日</a>。</h2>
     </main>
 
     <footer class="magic-hover magic-hover__square">
@@ -53,9 +62,21 @@
             "defaultCursor": false,
             "outerWidth": 30,
             "outerHeight": 30
-          }
-          magicMouse(options);
+        }
+        magicMouse(options);
 
+        ripple1 = new RippleEffect({
+            parent: document.querySelector('header'),
+            texture: './bg.jpg',
+            intensity: 1,
+            strength: 2,
+            area: 1,
+            waveSpeed: 0.001,
+            speedIn: 0.5,
+            speedOut: 2,
+            easing: 'Expo.easeInOut',
+            hover: true,
+          });
     </script>
 </body>
 

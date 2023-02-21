@@ -25,6 +25,36 @@ a:hover {
   border-bottom: 2px dotted whitesmoke;
 }
 
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0 -10%;
+  }
+  to {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 -10%;
+  }
+  to {
+    background-position: 0% 100%;
+  }
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -40;
+  background: #000;
+  top: 0;
+  left: 0;
+  /* background: url("../hehe.png") no-repeat fixed center; */
+  /* animation: animatedBackground 30s linear infinite; */
+}
+
 main {
   width: 100%;
   max-width: 600px;
@@ -39,13 +69,13 @@ main h2 {
 }
 
 main span {
-  color: #555;
+  color: #aaa;
   -webkit-transition: color 2s 1s;
   transition: color 2s 1s;
 }
 
 main span:hover {
-  color: white;
+  color: blueviolet;
   -webkit-transition: none;
   transition: none;
 }

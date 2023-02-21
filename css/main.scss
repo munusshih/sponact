@@ -22,6 +22,29 @@ a {
     }
 }
 
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 -10%;
+    }
+
+    to {
+        background-position: 0% 100%;
+    }
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -40;
+    background: #000;
+    top: 0;
+    left: 0;
+    /* background: url("../hehe.png") no-repeat fixed center; */
+    /* animation: animatedBackground 30s linear infinite; */
+}
+
 main {
     width: 100%;
     max-width: 600px;
@@ -36,11 +59,11 @@ main {
     }
 
     span {
-        color: #555;
+        color: #aaa;
         transition: color 2s 1s;
 
         &:hover {
-            color: white;
+            color: blueviolet;
             transition: none;
         }
     }
@@ -55,7 +78,7 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-    footer{
+    footer {
         position: relative;
         width: 100%;
         left: 0;
@@ -63,7 +86,7 @@ footer {
         padding: 20px 10px;
     }
 
-    main{
+    main {
         padding: 15px 15px;
         transition: padding 2s;
     }
